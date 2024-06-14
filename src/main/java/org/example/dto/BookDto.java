@@ -1,4 +1,4 @@
-package org.example.sandbox.dto;
+package org.example.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

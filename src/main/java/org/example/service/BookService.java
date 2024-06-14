@@ -1,8 +1,8 @@
-package org.example.sandbox.service;
+package org.example.service;
 
-import org.example.sandbox.dto.BookDto;
-import org.example.sandbox.entities.Book;
-import org.example.sandbox.repository.BookRepository;
+import org.example.dto.BookDto;
+import org.example.entities.Book;
+import org.example.repository.BookRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 

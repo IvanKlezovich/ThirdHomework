@@ -1,8 +1,5 @@
 
-X
-java:S1854";Remove this useless assignment to local variable "context".(ğÎ…³8ÒËâ€2
-I
-java:S1481",Remove this unused "context" local variable.(ğÎ…³8ÛËâ€2
-L
-java:S1068
-"*Remove this unused "logger" private field.(ÑÂ©ÿÿÿÿÿ8àËâ€2
+y
+java:S1128"1Remove this unused import 'javax.sql.DataSource'.(ÉòÂ¿úÿÿÿÿ8‡š¦°2J$48e15487-5a66-42a5-b64a-64267461df2f
+u
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8ˆš¦°2J$1053c504-53c4-41dc-b8ec-1e74d82859b9

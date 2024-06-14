@@ -1,4 +1,4 @@
-package org.example.sandbox.config;
+package org.example.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.modelmapper.ModelMapper;
@@ -17,10 +17,9 @@ import java.util.List;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.example.sandbox.controller",
-        "org.example.sandbox.service"})
-        //"org.example.sandbox.repository"})
-@Import(DataBaseConfig.class)
+@ComponentScan(basePackages = {"org.example.controller",
+        "org.example.service"})
+@Import(org.example.config.DataBaseConfig.class)
 public class SpringConfig implements WebMvcConfigurer {
     @Override
     public void configureMessageConverters(

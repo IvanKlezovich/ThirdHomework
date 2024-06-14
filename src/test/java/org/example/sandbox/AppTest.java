@@ -1,9 +1,8 @@
 package org.example.sandbox;
 
-import org.example.sandbox.config.DataBaseConfig;
-import org.example.sandbox.config.SpringConfig;
-import org.example.sandbox.entities.Book;
-import org.example.sandbox.repository.BookRepository;
+import org.example.config.DataBaseConfig;
+import org.example.entities.Book;
+import org.example.repository.BookRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

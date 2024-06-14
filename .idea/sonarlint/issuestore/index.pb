@@ -1,3 +1,35 @@
 
 7
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+S
+#src/main/java/org/example/Main.java,0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec6b
+d
+4src/main/java/org/example/aspects/LoggingAspect.java,6/7/677fe588da0e5d73872a7fbd74c054de072d98aa
+`
+0src/main/java/org/example/annotations/ToLog.java,a/3/a36907a4689d308ec3105f2d64f3dd16a6974746
+a
+1src/main/java/org/example/utils/MappingUtils.java,8/8/88cd01a8a43ec3b024a965f750134ea3167512bd
+^
+.src/main/java/org/example/entities/Author.java,b/9/b9b58495fe8392a425034b98e593f4f3ddce7840
+\
+,src/main/java/org/example/entities/Book.java,d/5/d5f78d09c7dbfc13dbb410b87f9eeb0bf07abd1b
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+^
+.src/test/java/org/example/sandbox/AppTest.java,2/d/2d340bf62ae68ed36bd3b9bb1fd8147602d5d00d
+h
+8src/main/java/org/example/repository/BookRepository.java,b/7/b7783d39ca81aa027ce3a0f700c9f233ca4aa9da
+b
+2src/main/java/org/example/service/BookService.java,4/e/4e0afb3f42ab32527a23feda117f6bd25e7844be
+Z
+*src/main/java/org/example/dto/BookDto.java,6/0/606fbe596bcbc3c7633bca9b6a28ed29cf76b2e7
+h
+8src/main/java/org/example/controller/BookController.java,8/6/863c0ee3b55362ba745c83019ab8ca6f55e08955
+i
+9src/main/java/org/example/controller/BeansController.java,8/7/87a727fe48494ebb0fe210b7ef8fd59205cc7bfd
+b
+2src/main/java/org/example/config/SpringConfig.java,7/2/72a0517863ce21930609873c023d774619bf39c8
+d
+4src/main/java/org/example/config/DataBaseConfig.java,e/8/e8f7ba4f998299ade9ccafd6e79414b4f492f21d
+k
+;src/main/java/org/example/config/DispatcherInitializer.java,e/a/eab07951236537248359ba66a789099118ec1614

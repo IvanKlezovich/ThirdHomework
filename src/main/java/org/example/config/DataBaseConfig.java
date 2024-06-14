@@ -1,4 +1,4 @@
-package org.example.sandbox.config;
+package org.example.config;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "org.example.sandbox.repository")
+@EnableJpaRepositories(basePackages = "org.example.repository")
 @EnableTransactionManagement
 @PropertySource({"classpath:database.properties", "classpath:hibernate.properties"})
 public class DataBaseConfig {

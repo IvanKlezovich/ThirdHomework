@@ -1,4 +1,4 @@
-package org.example.sandbox.controller;
+package org.example.controller;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;

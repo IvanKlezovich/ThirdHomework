@@ -1,8 +1,7 @@
-package org.example.sandbox.controller;
+package org.example.controller;
 
-import org.example.sandbox.dto.BookDto;
-import org.example.sandbox.entities.Book;
-import org.example.sandbox.service.BookService;
+import org.example.dto.BookDto;
+import org.example.service.BookService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
