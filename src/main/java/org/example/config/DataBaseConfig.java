@@ -1,23 +1,28 @@
 package org.example.config;
 
+import org.hibernate.SessionFactory;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "org.example.repository")
+@EnableJpaRepositories
+@ComponentScan(basePackages = "org.example.repository")
 @EnableTransactionManagement
 @PropertySource({"classpath:database.properties", "classpath:hibernate.properties"})
 public class DataBaseConfig {
@@ -40,10 +45,10 @@ public class DataBaseConfig {
     }
 
     @Bean
-    public LocalSessionFactoryBean sessionFactory() {
+    public SessionFactory sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.example.domain"); // Укажите пакеты, где находятся ваши сущности
+        sessionFactory.setPackagesToScan("com.example.entities"); // Укажите пакеты, где находятся ваши сущности
 
         Properties hibernateProperties = new Properties();
         hibernateProperties.setProperty("hibernate.dialect", environment.getProperty("hibernate.dialect"));
@@ -51,15 +56,11 @@ public class DataBaseConfig {
         hibernateProperties.setProperty("hibernate.show_sql", "true");
         sessionFactory.setHibernateProperties(hibernateProperties);
 
-        return sessionFactory;
+        return sessionFactory.getObject();
     }
 
-//    @Bean
-//    public JpaTransactionManager transactionManager() {
-//        JpaTransactionManager transactionManager = new JpaTransactionManager();
-//
-//        transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
-//
-//        return transactionManager;
-//    }
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        return new HibernateTransactionManager(sessionFactory());
+    }
 }
