@@ -1,32 +1,22 @@
 package org.example.config;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.jpa.HibernatePersistenceProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
-import java.util.Properties;
+import java.util.Objects;
 
 @Configuration
-@EnableJpaRepositories
-@ComponentScan(basePackages = "org.example.repository")
-@EnableTransactionManagement
-@PropertySource({"classpath:database.properties", "classpath:hibernate.properties"})
+@PropertySource("classpath:database.properties")
 public class DataBaseConfig {
     Environment environment;
+
+    private static final Logger logger = LoggerFactory.getLogger(DataBaseConfig.class);
 
     public DataBaseConfig(Environment environment) {
         this.environment = environment;
@@ -34,33 +24,19 @@ public class DataBaseConfig {
 
     @Bean
     public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
-        dataSource.setDriverClassName(environment.getProperty("database.driver"));
-        dataSource.setUrl(environment.getProperty("database.url"));
-        dataSource.setUsername(environment.getProperty("database.username"));
-        dataSource.setPassword(environment.getProperty("database.password"));
+        try {
+            DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
-        return dataSource;
-    }
+            dataSource.setDriverClassName(Objects.requireNonNull(environment.getProperty("database.driver")));
+            dataSource.setUrl(environment.getProperty("database.url"));
+            dataSource.setUsername(environment.getProperty("database.username"));
+            dataSource.setPassword(environment.getProperty("database.password"));
 
-    @Bean
-    public SessionFactory sessionFactory() {
-        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
-        sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan("com.example.entities"); // Укажите пакеты, где находятся ваши сущности
-
-        Properties hibernateProperties = new Properties();
-        hibernateProperties.setProperty("hibernate.dialect", environment.getProperty("hibernate.dialect"));
-        hibernateProperties.setProperty("hibernate.hbm2ddl.auto", "update");
-        hibernateProperties.setProperty("hibernate.show_sql", "true");
-        sessionFactory.setHibernateProperties(hibernateProperties);
-
-        return sessionFactory.getObject();
-    }
-
-    @Bean
-    public PlatformTransactionManager transactionManager() {
-        return new HibernateTransactionManager(sessionFactory());
+            return dataSource;
+        }catch (Exception e){
+            logger.info("DBCP DataSource bean cannot be created!", e);
+            return null;
+        }
     }
 }
