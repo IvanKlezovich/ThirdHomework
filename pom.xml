@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>Sandbox</artifactId>
+  <artifactId>TrirdHomework</artifactId>
   <packaging>war</packaging>
   <build>
     <plugins>
@@ -17,7 +17,7 @@
     </plugins>
   </build>
   <version>1.0-SNAPSHOT</version>
-  <name>Sandbox Maven Webapp</name>
+  <name>ThirdHomework Maven Webapp</name>
   <url>https://maven.apache.org</url>
   <properties>
     <spring.version>5.2.22.RELEASE</spring.version>

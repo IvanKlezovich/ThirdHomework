@@ -1,7 +1,7 @@
 package org.example.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.repository.SingerRepository;
+//import org.example.repository.SingerRepository;
 import org.example.service.SingerService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -16,7 +16,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Configuration
-//@EnableWebMvc
+@EnableWebMvc
 @ComponentScan(basePackages = {"org.example.config",
                                "org.example.controller",
                                "org.example.repository",
@@ -34,14 +34,9 @@ public class SpringConfig implements WebMvcConfigurer {
         converters.add(converter);
     }
 
-    @Bean
-    public SingerRepository singerRepository() {
-        return new SingerRepository();
-    }
-
-    @Bean
-    public SingerService singerService(SingerRepository singerRepository){
-        SingerService singerService = new SingerService(singerRepository);
-        return singerService;
-    }
+//    @Bean
+//    public SingerService singerService(SingerRepository singerRepository){
+//        SingerService singerService = new SingerService(singerRepository);
+//        return singerService;
+//    }
 }

@@ -1,7 +1,7 @@
 package org.example.controller;
 
 import org.example.service.SingerService;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +15,7 @@ public class SingerController {
         this.singerService = singerService;
     }
 
-    @RequestMapping("/all")
+    @GetMapping("/all")
     public String all(){
         return singerService.someSay();
     }
