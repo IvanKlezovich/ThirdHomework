@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
   <artifactId>Sandbox</artifactId>
@@ -10,116 +10,74 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>22</source>
-          <target>22</target>
+          <source>14</source>
+          <target>14</target>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <version>1.0-SNAPSHOT</version>
   <name>Sandbox Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+  <url>https://maven.apache.org</url>
   <properties>
-    <sprig-version>6.1.8</sprig-version>
-    <jakarta-servlet-api-version>6.0.0</jakarta-servlet-api-version>
-    <jakarta-persistence-version>3.2.0</jakarta-persistence-version>
-    <lambok-version>1.18.30</lambok-version>
-    <junuit-version>4.13.2</junuit-version>
-    <data-jpa-version>2.7.0</data-jpa-version>
-    <hibernate-version>5.6.9.Final</hibernate-version>
-<!--    <hibernate-core-version>6.5.2.Final</hibernate-core-version>-->
-    <postgresql-version>42.7.3</postgresql-version>
-    <jakson-databind>2.17.1</jakson-databind>
+    <spring.version>5.2.22.RELEASE</spring.version>
+    <servlet-api>4.0.1</servlet-api>
+    <spring.data-jpa>2.7.0</spring.data-jpa>
+    <hibernate>5.6.9.Final</hibernate>
+    <postgresql>42.4.0</postgresql>
+    <jackson-databind>2.13.3</jackson-databind>
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.modelmapper</groupId>
-      <artifactId>modelmapper</artifactId>
-      <version>3.2.0</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junuit-version}</version>
-      <scope>test</scope>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.32</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>${sprig-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>${sprig-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>${sprig-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>${sprig-version}</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
-      <groupId>jakarta.persistence</groupId>
-      <artifactId>jakarta.persistence-api</artifactId>
-      <version>${jakarta-persistence-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
-      <version>${jakarta-servlet-api-version}</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>${lambok-version}</version>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${servlet-api}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-jpa</artifactId>
-      <version>${data-jpa-version}</version>
+      <version>${spring.data-jpa}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-entitymanager</artifactId>
-      <version>${hibernate-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-core</artifactId>
-      <version>${hibernate-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>${jakson-databind}</version>
+      <version>${hibernate}</version>
     </dependency>
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>${postgresql-version}</version>
+      <version>${postgresql}</version>
     </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>${sprig-version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-orm</artifactId>
-      <version>${sprig-version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
-      <version>${sprig-version}</version>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-databind}</version>
     </dependency>
   </dependencies>
 </project>
