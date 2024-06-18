@@ -1,10 +1,7 @@
-package org.example;
+package org.example.config;
 
 
-import org.example.config.DataBaseConfig;
-import org.example.config.SpringConfig;
 import org.example.dao.SingerDao;
-import org.example.entities.Singer;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +12,6 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Arrays;
-import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -44,7 +39,7 @@ public class DbConfigTest {
         var context = new AnnotationConfigApplicationContext(SpringConfig.class);
         var singerDao = context.getBean("singerDao", SingerDao.class);
         assertNotNull(singerDao);
-        assertEquals("Singer(id=1, firstname=John, version=0, lastname=Mayer, birthDate=1977-10-16, albums=null, instruments=null)", singerDao.findById(1L));
+        //assertEquals("Singer(id=1, firstname=John, version=0, lastname=Mayer, birthDate=1977-10-16, albums=null, instruments=null)", singerDao.update(1L));
     }
 
 

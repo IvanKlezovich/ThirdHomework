@@ -2,12 +2,10 @@ package org.example.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.dao.SingerDao;
-import org.example.repository.JdbcSingerDao;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -20,11 +18,12 @@ import java.util.Collections;
 import java.util.List;
 
 @Configuration
-//@EnableWebMvc
-@ComponentScan(basePackages = {"org.example.controller",
+@EnableWebMvc
+@ComponentScan(basePackages = {
+        "org.example.controller",
         "org.example.service",
-        "org.example.repository"})
-@Import(HibernateConfig.class)
+        "org.example.repository",
+        "org.example.config"})
 public class SpringConfig implements WebMvcConfigurer {
     @Override
     public void configureMessageConverters(
@@ -49,10 +48,4 @@ public class SpringConfig implements WebMvcConfigurer {
         jdbcTemplate.setDataSource(dataSource);
         return jdbcTemplate;
     }
-
-    @Bean
-    public SingerDao singerDao(DataSource dataSource){
-        return new JdbcSingerDao(dataSource);
-    }
-
 }

@@ -16,6 +16,10 @@ import java.util.Set;
 public class Instrument implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    public Instrument(String instrumentId) {
+        this.instrumentId = instrumentId;
+    }
+
     @Id
     @Column(name = "instrument_id")
     private String instrumentId;

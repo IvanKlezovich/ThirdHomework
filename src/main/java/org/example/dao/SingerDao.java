@@ -2,9 +2,12 @@ package org.example.dao;
 
 import org.example.entities.Singer;
 
+import java.util.List;
+
 public interface SingerDao {
-    Iterable<Singer> findAll();
-    String findById(long id);
-    boolean save(Singer singer);
-    boolean delete(Singer singer);
+    List<Singer> findAll();
+    Singer findById(Long id);
+    boolean update(Singer singer);
+    boolean create(Singer singer);
+    boolean delete(Long id);
 }

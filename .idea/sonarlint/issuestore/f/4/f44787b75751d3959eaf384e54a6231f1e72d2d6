@@ -1,0 +1,5 @@
+
+a
+java:S2583"DChange this condition so that it does not always evaluate to "false"(°Åæ–8±≤Ç’Ç2
+ó
+java:S2159"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(°Åæ–8∑≤Ç’Ç2

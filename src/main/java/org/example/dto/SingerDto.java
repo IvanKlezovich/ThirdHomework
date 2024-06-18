@@ -12,13 +12,10 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class SingerDto {
     private String firstname;
 
     private String lastname;
 
     private Date birthDate;
-
-    private Set<Album> albums;
 }

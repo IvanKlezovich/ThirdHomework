@@ -1,6 +1,4 @@
 
-X	java:S125D"<This block of commented-out lines of code should be removed.(ïÅİô8®¦£¥‚2
-[
-java:S1128"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬şÿÿÿÿ8¯¦£¥‚2
-G
-java:S1068"*Remove this unused "logger" private field.(æÉ¿®8°¦£¥‚2
+7
+java:S1220""Move this file to a named package.8¥‰Ï‚2
+]	java:S125"<This block of commented-out lines of code should be removed.(Ê‚Ûúÿÿÿÿ8’¥‰Ï‚2
