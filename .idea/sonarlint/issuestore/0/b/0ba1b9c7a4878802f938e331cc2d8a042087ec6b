@@ -1,6 +1,6 @@
 
-L
-java:S3740"/Provide the parametrized type for this generic.(Ìπ∑¨8úøç±Ç2
-]
-java:S1612"@Replace this lambda with method reference 'System.out::println'.(€£å≤8®øç±Ç2
-G	java:S106"+Replace this use of System.out by a logger.(€£å≤8©øç±Ç2
+r
+java:S3740"/Provide the parametrized type for this generic.(Ìπ∑¨8„†Õ±Ç2J$7fbec763-0fcd-4868-b0b0-1f03bb237146
+É
+java:S1612"@Replace this lambda with method reference 'System.out::println'.(€£å≤8ä°Õ±Ç2J$65bc332a-2822-4737-93a7-40cc035571ad
+m	java:S106"+Replace this use of System.out by a logger.(€£å≤8è°Õ±Ç2J$ddd784b4-7bd4-433d-9d35-d8570c0ecb5a

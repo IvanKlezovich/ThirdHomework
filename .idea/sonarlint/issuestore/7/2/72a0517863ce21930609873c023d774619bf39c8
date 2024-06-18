@@ -1,7 +1,6 @@
 
-~	java:S125"<This block of commented-out lines of code should be removed.(‘ïƒ8¥Ü¬±‚2J$bac2bbc4-ad5f-413b-a3e5-edbd20135099
-ƒ	java:S125&"<This block of commented-out lines of code should be removed.(î–óçüÿÿÿÿ8¼’­±‚2J$085e66e0-5b0f-4701-bda3-98d436e39d2f
-`
-java:S1128">Remove this unused import 'org.example.service.SingerService'.(äåîöøÿÿÿÿ8îª®±‚2
-e
-java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8îª®±‚2
+¨
+java:S1488*"eImmediately return this expression instead of assigning it to the temporary variable "singerService".(ñ¢÷8ÚúŒº‚2J$0a84889a-0f71-49b2-8a7c-d5945ef0cd45
+~	java:S125"<This block of commented-out lines of code should be removed.(‘ïƒ8âúŒº‚2J$6dac4f12-d495-41ff-a898-0bffdc47c26d
+›
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8Ï—º‚2J$ce32da37-b9dd-436f-b15e-b0b6f4d87796

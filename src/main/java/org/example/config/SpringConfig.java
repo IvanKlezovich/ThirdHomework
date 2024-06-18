@@ -2,7 +2,9 @@ package org.example.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 //import org.example.repository.SingerRepository;
+import org.example.repository.SingerRepository;
 import org.example.service.SingerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -22,6 +24,7 @@ import java.util.List;
                                "org.example.repository",
                                "org.example.service"})
 public class SpringConfig implements WebMvcConfigurer {
+
     @Override
     public void configureMessageConverters(
             List<HttpMessageConverter<?>> converters) {
@@ -34,9 +37,9 @@ public class SpringConfig implements WebMvcConfigurer {
         converters.add(converter);
     }
 
-//    @Bean
-//    public SingerService singerService(SingerRepository singerRepository){
-//        SingerService singerService = new SingerService(singerRepository);
-//        return singerService;
-//    }
+    @Bean
+    public SingerService singerService(SingerRepository singerRepository){
+        SingerService singerService = new SingerService(singerRepository);
+        return singerService;
+    }
 }

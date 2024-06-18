@@ -1,11 +1,11 @@
 package org.example.entity;
 
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
