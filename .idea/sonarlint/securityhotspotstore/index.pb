@@ -95,3 +95,5 @@ f
 6src/main/java/org/example/config/SpringTestConfig.java,d/8/d815f65267b2f7cfa59ab4f3f01526314055ba87
 n
 >src/test/java/org/example/controller/SingerControllerTest.java,0/8/08d0bee2920e297b0513e036d920605e34920c77
+h
+8src/test/java/org/example/service/SingerServiceTest.java,b/5/b5a56e023797ca7247892f2a9a6881705dc9e6a3
