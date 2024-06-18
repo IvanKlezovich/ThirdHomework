@@ -1,11 +1,11 @@
 
 ¥
-java:S14886"bImmediately return this expression instead of assigning it to the temporary variable "instrument".(Ò›õÈ8”‡¢Ô‚2J$a88c599b-f143-4ce1-86c9-7892f15f6d5d
+java:S1488["bImmediately return this expression instead of assigning it to the temporary variable "instrument".(Ò›õÈ8”‡¢Ô‚2J$bf54617f-977b-4c5a-b542-97191230e906
 y
-java:S1874"6Remove this use of "queryForObject"; it is deprecated.(âñ©Û8 ‡¢Ô‚2J$4a8b2603-902e-4714-9aaf-5ef22c2abb72
+java:S18746"6Remove this use of "queryForObject"; it is deprecated.(âñ©Û8ªİ¤â‚2J$df6bf1e5-e02a-4ba3-a632-effd004ba04e
 ~
-java:S1128"6Remove this unused import 'org.example.dao.SingerDao'.(¥÷ˆûÿÿÿÿ8Æ©òÔ‚2J$a77ee033-4a9c-414b-a21f-6892d66e8a02
+java:S1128"6Remove this unused import 'org.example.dao.SingerDao'.(¥÷ˆûÿÿÿÿ8Æ©òÔ‚2J$426e137e-b6e4-4ee9-b550-9ecec3871dec
 €
-java:S1128"8Remove this unused import 'org.example.entities.Singer'.(ÜŒàøÿÿÿÿ8Æ©òÔ‚2J$90750a0f-d26d-41e6-a0e8-8f67f9f18dfa
+java:S1128"8Remove this unused import 'org.example.entities.Singer'.(ÜŒàøÿÿÿÿ8Æ©òÔ‚2J$3b09a19f-104b-4a88-a2c5-2cfe29cbfbc3
 s
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Æ©òÔ‚2J$ac64f7dc-869b-453f-9840-62c4929a96cd
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Æ©òÔ‚2J$ee487d3f-7e7e-4f02-8b24-202ea8c4b8fc
